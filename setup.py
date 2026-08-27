@@ -7,7 +7,7 @@ setup(
     version=version,
     author="iMio",
     author_email="support-ts@imio.be",
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests", "tests.*"]),
     include_package_data=True,
     classifiers=[
         "Environment :: Web Environment",
