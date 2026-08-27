@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=50, verbose_name='Title')),
                 ('slug', models.SlugField(unique=True, verbose_name='Identifier')),
                 ('description', models.TextField(verbose_name='Description')),
-                ('url', models.URLField(blank=True, max_length=255, verbose_name='URL')),
+                ('url', models.URLField(help_text='URL complète du endpoint ServeurSGO cible, ex : https://test-guichetcitoyen.iile.be/ServeurSGO/resources/CU112messages', max_length=255, verbose_name='URL')),
                 ('users', models.ManyToManyField(blank=True, related_name='+', related_query_name='+', to='base.apiuser')),
             ],
             options={
